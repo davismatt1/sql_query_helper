@@ -1,0 +1,18 @@
+body {
+  font-family: roboto;
+  color: black;
+}
+a:hover {
+  color: indianred;
+}
+td {
+  border-radius: 10px;
+}
+.navbar{
+  padding: 10px;
+  min-width: 150px;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
