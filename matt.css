@@ -2,8 +2,15 @@ body {
   font-family: roboto;
   color: black;
 }
+
+a:link {
+  color: #0A3849;
+}
+a:visited {
+  color: #0A3849;
+}
 a:hover {
-  color: indianred;
+  color: #0C9ED6;
 }
 td {
   border-radius: 10px;
@@ -11,8 +18,22 @@ td {
 .navbar{
   padding: 10px;
   min-width: 150px;
+  background-color: #FFB564;
 }
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+}
+.pagetitle{
+  font-size: 50pt;
+  color: #0C9ED6;
+}
+.example{
+  background-color: #5DBCE0;
+}
+.subtitle{
+  color: #FF8603
+}
+.subsubtitle {
+  color: #0C9ED6;
 }

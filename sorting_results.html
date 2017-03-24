@@ -6,30 +6,40 @@
   <title>SORTING RESULTS</title>
 </head>
 <body>
-<h1 align="center">SQL QUERY HELPER</h1>
+  <div class="wrapper">
+<h1 align="center" class="pagetitle">SQL QUERY HELPER</h1>
 <br />
 <table align="center" border="0" width="90%">
   <tr>
-    <td width="20%" valign="top" bgcolor="#CDBAE3" rowspan="7" class="navbar">
+    <td width="20%" valign="top" rowspan="7" class="navbar">
       <p align="left"><a href="sql_query_helper.html">HOME</a></p>
+      <br />
       <p align="left"><a href="selecting_data.html">SELECTING DATA</a></p>
-      <p align="right"><a href="selecting_data.html#1.1">Sub point 1.1</a></p>
-      <p align="right"><a href="selecting_data.html#1.2">Sub point 1.2</a></p>
-      <p align="right"><a href="selecting_data.html#1.3">Sub point 1.3</a></p>
+      <br />
+      <p align="right"><a href="selecting_data.html#1.1">MULTIPLE COLUMNS</a></p>
+      <p align="right"><a href="selecting_data.html#1.2">UNIQUE RECORDS</a></p>
+      <p align="right"><a href="selecting_data.html#1.3">LIMITED RETURN SET</a></p>
+      <br />
+      <br />
       <p align="left"><a href="sorting_results.html">SORTING RESULTS</a></p>
-      <p align="right"><a href="sorting_results.html#2.1">Sub point 2.1</a></p>
-      <p align="right"><a href="sorting_results.html#2.2">Sub point 2.2</a></p>
-      <p align="right"><a href="sorting_results.html#2.3">Sub point 2.3</a></p>
+      <br />
+      <p align="right"><a href="sorting_results.html#2.1">ORDERING RESULTS</a></p>
+      <p align="right"><a href="sorting_results.html#2.2">MULTIPLE ORDERING</a></p>
+      <p align="right"><a href="sorting_results.html#2.3">CONCATENATION</a></p>
+      <br />
+      <br />
       <p align="left"><a href="filtering_results.html">FILTERING RESULTS</a></p>
-      <p align="right"><a href="filtering_results.html#3.1">Sub point 3.1</a></p>
-      <p align="right"><a href="filtering_results.html#3.2">Sub point 3.2</a></p>
-      <p align="right"><a href="filtering_results.html#3.3">Sub point 3.3</a></p>
+      <br />
+      <p align="right"><a href="filtering_results.html#3.1">TEXT VALUES</a></p>
+      <p align="right"><a href="filtering_results.html#3.2">COMPARISON OPERATORS</a></p>
+      <p align="right"><a href="filtering_results.html#3.3">MULTIPLE COMPARISONS</a></p>
+      <br />
+      <br />
       <p align="left"><a href="table_joins.html">TABLE JOINS</a></p>
-      <p align="right"><a href="table_joins.html#4.1">Sub point 4.1</a></p>
-      <p align="right"><a href="table_joins.html#4.2">Sub point 4.2</a></p>
-      <p align="right"><a href="table_joins.html#4.3">Sub point 4.3</a></p>
-
-
+      <br />
+      <p align="right"><a href="table_joins.html#4.1">SIMPLE JOIN</a></p>
+      <p align="right"><a href="table_joins.html#4.2">INNER JOIN</a></p>
+      <p align="right"><a href="table_joins.html#4.3">CUSTOM TABLE NAMES</a></p>
 
 
 
@@ -38,79 +48,58 @@
     </td>
 
     <td width="75%" valign="top" align="center">
-    <h1>SORTING RESULTS</h1>
+    <h1 class="subtitle">SORTING RESULTS</h1>
     </td>
   </tr>
   <tr>
   <td align="center">
-    <h2 id="2.1">Sub point 2.1</h2>
-    <p>Information text</p>
+    <h2 id="2.1">ORDERING RESULTS</h2>
+    <p>To sort the returned data, the query can use the ORDER BY statement</p>
+    <p>The ORDER BY keyword sorts the results in ascending order</p>
+    <p>The following example sorts the concession cards table by the state column:</p>
   </td>
   </tr>
   <tr>
-  <td align="center" bgcolor="#D1ABFF">
-    <p contenteditable="true">Interactive example</p>
-  </td>
-  </tr>
-  <tr>
-  <td align="center">
-    <h2 id="2.2">Sub point 2.2</h2>
-    <p>Information text</p>
-  </td>
-  </tr>
-  <tr>
-  <td align="center" bgcolor="#D1ABFF">
-    <p contenteditable="true">Interactive example</p>
+  <td align="center" class="example">
+    <p contenteditable="true">SELECT * FROM concession_cards ORDER BY state;</p>
   </td>
   </tr>
   <tr>
   <td align="center">
-    <h2 id="2.3">Sub point 2.3</h2>
-    <p>Information text</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
+    <br />
+    <br />
+    <br />
+    <h2 id="2.2">MULTIPLE ORDERING</h2>
+    <p>ORDER BY can sort retrieved data by multiple columns</p>
+    <p>Use commas between the columns, it will order the results in the order columns are listed</p>
+    <p>The following example sorts the concession cards table by the state column, and then if there are any duplicated concession card states, they will by ordered by the customer_id column:</p>
   </td>
   </tr>
   <tr>
-  <td align="center" bgcolor="#D1ABFF">
-    <p contenteditable="true">Interactive example</p>
+  <td align="center" class="example">
+    <p contenteditable="true">SELECT * FROM concession_cards ORDER BY state, customer_id;</p>
+  </td>
+  </tr>
+  <tr>
+  <td align="center">
+    <br />
+    <br />
+    <br />
+    <h2 id="2.3">CONCATENATION</h2>
+    <p>The CONCAT function is used to concatenate two or more text values and returns the concatenating string</p>
+    <p>Taking the above example, if we wanted to concatenate the state with the customer_id, separating with a comma</p>
+    <p>The result could look like this: active, 123456789. This query is below:</p>
+  </td>
+  </tr>
+  <tr>
+  <td align="center" class="example">
+    <p contenteditable="true">SELECT CONCAT(state, ‘,’, customer_id) FROM concession_cards;</p>
   </td>
   </tr>
 </table>
 
 
 
-
+</div>
 </body>
 </html>
